@@ -7,7 +7,7 @@
 #	version:v0.1
 #	useage:	chmod 0777 environment_config.sh
 #		./environment_config.sh
-#       note: close vim before execute environment_config.sh
+#       note:   close vim before execute environment_config.sh
 #
 #######################################################################################
 
@@ -68,6 +68,11 @@ if [ -f "$vimrc_path" ]; then
 	echo "vim finish config."
     fi
 else
+    rm -rf ~/hahaya-vim
+    git clone https://github.com/hahaya/hahaya-vim.git ~/hahaya-vim
+    cd ~/hahaya-vim
+    cp .vimrc ~/.vimrc
+    
     echo "vim finish config."
 fi
 
