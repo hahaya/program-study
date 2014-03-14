@@ -7,6 +7,7 @@
 #	version:v0.1
 #	useage:	chmod 0777 environment_config.sh
 #		./environment_config.sh
+#       note: close vim before execute environment_config.sh
 #
 #######################################################################################
 
