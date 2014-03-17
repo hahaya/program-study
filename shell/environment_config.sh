@@ -7,6 +7,7 @@
 #	version:v0.1
 #	useage:	chmod 0777 environment_config.sh
 #		./environment_config.sh
+#       note:   close vim before execute environment_config.sh
 #
 #######################################################################################
 
@@ -67,6 +68,11 @@ if [ -f "$vimrc_path" ]; then
 	echo "vim finish config."
     fi
 else
+    rm -rf ~/hahaya-vim
+    git clone https://github.com/hahaya/hahaya-vim.git ~/hahaya-vim
+    cd ~/hahaya-vim
+    cp .vimrc ~/.vimrc
+    
     echo "vim finish config."
 fi
 
@@ -78,7 +84,7 @@ if [ -z "$gcc_info" ]; then
     sudo apt-get -y install gcc-4.8
     sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.8 50
 
-    sudo apt-get -y install g++4.8
+    sudo apt-get -y install g++-4.8
     sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-4.8 50  
 
     echo "gcc finish install."
