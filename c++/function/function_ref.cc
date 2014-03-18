@@ -21,4 +21,6 @@ int main()
     std::for_each(vecInt.begin(), vecInt.end(), std::ref(func));
     //std::for_each(vecInt.begin(), vecInt.end(),
             //std::ref( [](int val){std::cout << val + 2 << std::endl;} ));
+
+    return 0;
 }
