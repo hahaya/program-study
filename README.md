@@ -1,4 +1,5 @@
 program-study
 =============
 
-some study code.
+shell     bash shell study code
+c++       c++ study code
