@@ -19,15 +19,6 @@ public:
     {
         socket_.async_read_some(boost::asio::buffer(message_),
                 boost::bind(&TcpConnection::handle_read, shared_from_this(),boost::asio::placeholders::error, boost::asio::placeholders::bytes_transferred));
-        /*
-        boost::arrar<char, 128> buf;
-        boost::system::error_code error;
-        size_t len = socket_.read_some(boost::asio::buffer(buf), error);
-        if (boost::asio::error::eof == error)
-            break;
-        else if (error)
-            throw boost::system::error_code(error);
-        */
     }
 
     boost::asio::ip::tcp::socket& socket()
